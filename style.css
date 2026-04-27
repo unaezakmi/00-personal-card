@@ -1,0 +1,114 @@
+/* === Базовые настройки страницы === */
+body {
+    /* Шрифт. system-ui использует системный шрифт ОС, очень быстро грузится и выглядит нативно */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    /* Межстрочный интервал для читаемости */
+    line-height: 1.6;
+    /* Убираем стандартные отступы */
+    margin: 0;
+    padding: 0;
+    /* Цвет фона всей страницы */
+    background-color: #f4f7f6;
+    /* Цвет текста */
+    color: #333;
+}
+
+/* === Центрируем и ограничиваем ширину контентной части === */
+body {
+    /* Делаем body флекс-контейнером */
+    display: flex;
+    /* Направление: вертикально */
+    flex-direction: column;
+    /* Выравниваем по горизонтали */
+    align-items: center;
+    /* Минимальная высота на весь экран */
+    min-height: 100vh;
+}
+
+/* Общая "карточка", в которой всё лежит */
+header, main, footer {
+    /* Максимальная ширина контента */
+    max-width: 600px;
+    /* Ширина 90% на маленьких экранах, чтобы не прилипало к краям */
+    width: 90%;
+    /* Внутренние отступы */
+    padding: 30px;
+    /* Внешний нижний отступ между блоками */
+    margin-bottom: 20px;
+    /* Белый фон и скругленные углы */
+    background-color: #ffffff;
+    /* Тень для "приподнятости" */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    /* Скругляем углы */
+    border-radius: 12px;
+}
+
+/* === Стили для шапки === */
+header {
+    text-align: center;
+    margin-top: 40px; /* Отступ сверху, чтобы не прилипало к верху экрана */
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+header h1 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 1.2em;
+}
+
+/* === Стили для основного контента === */
+main section {
+    margin-bottom: 30px;
+}
+
+/* Красивая разделительная линия перед "Контактами", кроме первой секции */
+main section:not(:first-child) {
+    border-top: 1px solid #ecf0f1;
+    padding-top: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db; /* Синяя полоска под заголовком */
+    padding-bottom: 5px;
+    display: inline-block; /* Чтобы полоска была по ширине текста */
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none; /* Убираем стандартные маркеры */
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* === Стили для ссылок === */
+a {
+    color: #3498db;
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+    /* Плавный переход цвета при наведении */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9; /* Темнеет при наведении */
+    text-decoration: underline;
+}
+
+/* === Стили для подвала === */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #95a5a6;
+    margin-bottom: 40px;
+}
